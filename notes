@@ -1,0 +1,46 @@
+'''
+### base de donnee
+
+###apres avoir cree un dossier 'database' et un fichier dans ce dossier 'db.sqlite3' je 
+###vais aller sur le cmd (dans mon projet )et taper  : 
+
+sqlite3 database/db.sqlite3
+
+##sqlite3, stp va dans database et connecte toi sur le fichier db.sqlite3
+###ensuite je tape : 
+
+.schema 
+
+## celame sort le shema de mon model (ou ma table)
+### si je veux ajouter des donnees dans ma table, j'import d'abord le model Post : 
+
+from flaskproject import Post
+
+## puis je cree le premier instance de ce model : 
+ p = Post()
+p.title = 'blablabla'
+p.content = 'blalbla '
+
+## pour enregistrer ca dans la table
+db.session.add(p) 
+db.session.commit()
+
+## faire des requette sur la table 
+
+#recupere toute les instances
+Post.query.all()
+
+#combien d'instance
+Post.query.count()
+
+#recuperer l'instance qui a l'id 2
+Post.query.get(2)
+
+Post.query.order_by(Post.title.desc())
+
+##si je veux modifier uneinstance
+p = Post.query.get(1)
+p.title = 'tartapion'
+db.session.commit()
+
+'''

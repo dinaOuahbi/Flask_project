@@ -1,0 +1,32 @@
+{% extends 'layouts/default.html' %}
+
+
+{% block title %} 
+    Default models
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet", type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>Classification - default models</h1>
+    <p>Table show algorithms and its mean-mcc, mean-auc and mean-acc of 10 folds cross validation across 5 
+        repetitions using discovery dataset (all feature default parameters of each algorithm)</p>
+
+        <div class='load_data'>
+            <form action="/classification_jnb/default_models" method="post">
+                <input type="file" name="upload-file" value="">
+                <label for="upload-file"><i>Load and training models</i></label>
+                <input class="submit" type="submit" name="" value="Submit", onclick="loading();">
+            </form>
+        </div>
+
+        <script type="text/javascript">// <![CDATA[
+            function loading(){
+                $("#loading").show();
+                $("#content").hide();       
+            }
+    // ]]></script>
+
+{% endblock  %}

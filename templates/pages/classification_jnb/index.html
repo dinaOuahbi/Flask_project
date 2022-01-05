@@ -1,0 +1,34 @@
+{% extends 'layouts/default.html' %}
+
+
+
+
+{% block title %} 
+classification_jnb
+{% endblock %}
+{% block head %}
+<link rel="stylesheet", type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1>Classification_jnb</h1>
+<div class="container">
+    <p class="para1">Here, we are going to predict the response to treatment in a group of breast cancer patients treated 
+        with several drugs belonging to the Taxane and Anthracycline family. Basically, these patients were 
+        divided into two groups according to their residual cancer burden: RCB 0/I as complete response 
+        (Considered as responder) and RCBII/III as partial response (considered as non-responder) in both of 
+        discovery and independent dataset. In our case, the data are unbalanced (the number of samples in one 
+        class is much larger than the number of samples in the other classes) <br>We will try to optimize prediction through 3 methods and evaluate them on data independent of the 
+        training data. These methods are:
+    </p>
+    <ul>
+        <li><a href="{{ url_for('default_models') }}">- Default models</a></li>
+        <li><a href="#">- Feature selection or optimal model complexity (omc)</a></li>
+        <li><a href="#">-  Optimization of the classification threshold</a></li>
+        <li><a href="#">-  Optimization of the algorithm hyperparameters</a></li>
+    </ul>
+</div>
+
+{% endblock  %}
+
+

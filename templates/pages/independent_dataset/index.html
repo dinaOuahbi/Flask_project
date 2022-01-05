@@ -1,0 +1,23 @@
+{% extends 'layouts/default.html' %}
+
+
+{% block title %} 
+Indep data
+{% endblock %}
+
+{% block body %}
+<h1>Independent dataset</h1>
+<hr>
+<br>
+{% for row in indep_data %}
+    <article>
+        <h2>
+            <a href="{{ url_for('independent_dataset_show', id=row.id) }}">
+                ✔  {{row.id}}  -  {{row.title|upper}}
+            </a>
+        </h2>
+        <p>{{row.content|truncate(15)}}</p>
+    </article>
+    <br>
+{% endfor %}
+{% endblock  %}

@@ -1,0 +1,23 @@
+Characteristics,Discovery dataset(N=310),Independent dataset(N=248)
+DATA source,GSE25055,GSE32603
+Drug,paclitaxel | FAC | doxorubicine | cyclophosphamide,Anthracycline | Taxane | trastuzimab
+Cancer type,HER2 negative breast cancer,Breast cancer
+Gender,Female,Female
+Age,26-75 (±10.41),nan
+Number of responder,57,51
+Number of non responder,249,193
+Number of patients without available response ,4,nan
+Race,nan,nan
+GENE expression profiling,Affymetrix Human Genome U133A Array,UCSF/HAQQLAB_Human_40986_ISPY
+Distribution of technology,Commercial,Non-Commercial
+Number of gene in total,22283,35069
+,,
+Number of gene in common,8993,8993
+Overall survival,NA,NA
+Progression-free survival (years),0.052-7.439 (+- 1.68),0.49-6.9 (+- 1.69)
+ER- status (+),174,154
+ER- status (-),131,91
+PR-status(+),142,nan
+PR-status(-),162,nan
+her2-status(+),4,186
+her2-status(-),291,55

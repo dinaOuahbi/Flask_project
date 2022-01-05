@@ -1,0 +1,13 @@
+{% extends 'layouts/default.html' %}
+
+
+{% block title %} 
+data comparison
+{% endblock %}
+
+{% block body %}
+<h1>Data comparison</h1>
+
+{{ data | safe }}
+
+{% endblock  %}

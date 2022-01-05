@@ -1,0 +1,30 @@
+{% extends 'layouts/default.html' %}
+
+{% block body %}
+    
+<h1>Clients_list({{clients|length}})</h1>
+
+    <hr>
+    
+    {% for client in clients %}
+        <article>
+            <h2>
+                <a href="{{ url_for('client_show', id=client.id) }}">
+                    #{{client.id}} - {{client.name|upper}}
+                </a>
+            </h2>
+            <p>{{client.achats}}</p>
+        </article>
+        <hr>
+    {% endfor %}
+
+
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Ab a error animi quibusdam assumenda quaerat est amet repellendus 
+        fugiat sapiente ut mollitia voluptate, qui dicta ipsa quia reiciendis harum eum.</p>
+    <p>check out our <a href="{{ url_for('client_index') }}">clients list</a></p>
+
+
+{% endblock %}

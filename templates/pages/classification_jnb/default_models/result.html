@@ -1,0 +1,30 @@
+{% extends 'layouts/default.html' %}
+
+
+{% block title %} 
+    Default models
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet", type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1>Classification - classification scores results</h1>
+    
+
+    <h3>Datasets (10 rows)</h3>
+    
+    {{data | safe}}
+
+    <h3>Tableau des scores de prediction</h3>
+    
+    <p>Table : show algorithms and its mean-mcc, mean-auc and mean-acc of 10 folds cross validation across 5 
+        repetitions using discovery dataset (all feature default parameters of each algorithm)
+        </p>
+    
+    {{default_models | safe}}
+
+        
+
+{% endblock  %}

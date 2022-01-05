@@ -1,0 +1,16 @@
+{% extends 'layouts/default.html' %}
+
+
+{% block title %} {{row_data.title}} {% endblock %}
+
+{% block body %}
+    
+    <h1>{{row_data.title}}</h1>
+    <p>{{row_data.content}}</p>
+    <br>
+    <br>
+    <br>
+
+    <strong><p><a href="{{ url_for('independent_dataset') }}">All independent dataset variables✔</a></p></strong>
+
+{% endblock %}

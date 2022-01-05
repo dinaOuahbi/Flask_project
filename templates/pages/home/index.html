@@ -1,0 +1,58 @@
+{% extends 'layouts/default.html' %}
+
+
+{% block title %} 
+home
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet", type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+<h1>Home page</h1>
+<div class='container'>
+    <div class="image">
+        <img src="{{ url_for('static', filename='logos/ML-logo.png') }}" alt="Machine learning logo">
+    </div>
+    <div class="para1">
+        <p>Given a clinical feature and genetic expression datasets of patients who have a particular form of cancer, 
+            can we identify which patients are going to respond to the given treatment? Answering this question is 
+            the aim of machine learning and computational statistics. In particular, these binary classification tasks 
+            can be efficiently addressed by supervised machine learning techniques, such as artificial neural 
+            networks, k-nearest neighbors, support vector machines, random forest, gradient boosting, or other 
+            methods. Here the word binary means that the data element statuses and prediction outcomes (class 
+            labels) can be twofold: in the example of patients, it can mean healthy/sick, or low/high grade tumor. 
+            Usually, scientists indicate the two classes as the negative and the positive class. The 
+            term classification means that the goal of the process is to attribute the correct label to each data 
+            instance (sample); the process itself is known as the classifier, or classification algorithm.</p>
+    </div>
+
+</div>
+<br>
+<br>
+
+<div class='load_data'>
+    <form action="/descriptive_analysis" method="post">
+        <input type="file" name="upload-file" value="">
+        <label for="upload-file"><i>Load and analyse dataset</i></label>
+        <input class="submit" type="submit" name="" value="Submit">
+    </form>
+</div>
+
+<br>
+<hr>
+
+
+<div class='load_data'>
+    <form action="/statistic_test" method="post">
+        <input type="file" name="upload-file" value="">
+        <label for="upload-file"><i>Statistic test</i></label>
+        <input class="submit" type="submit" name="" value="Submit">
+    </form>
+</div>
+
+
+
+
+{% endblock  %}

@@ -1,0 +1,24 @@
+<! -- barre navigation horizontale-->
+
+
+<nav>
+    <ul class="nav-list">
+        <li class="nav-item"><a href="{{ url_for('home') }}">Home</a></li>
+        <li class="nav-item"><a href="{{ url_for('classification_jnb') }}">Classification Jnb</a></li>
+        <li class="nav-item"><a href="{{ url_for('classification_pipeline') }}">Clasification Pipeline</a></li>
+        
+    </ul>
+</nav>
+
+<! -- barre navigation veritical -->
+
+<ul class="nav-list2">
+    <li><a class="active" href="#">Exemple of breast cancer</a></li>
+    <li><a href="{{ url_for('discovery_dataset') }}">Discovery dataset</a></li>
+    <li><a href="{{ url_for('independent_dataset') }}">Independent dataset</a></li>
+    <li><a href="{{ url_for('data_comparison') }}">Datasets comparison</a></li>
+    <li><a href="#">Descriptive analysis</a></li>
+    <li><a href="#">Classification of drug response</a></li>
+  </ul>
+
+  

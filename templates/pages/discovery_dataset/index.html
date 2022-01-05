@@ -1,0 +1,26 @@
+{% extends 'layouts/default.html' %}
+
+
+{% block title %} 
+discovery dataset
+{% endblock %}
+
+{% block body %}
+<h1>Discovery dataset overview</h1>
+<hr>
+<br>
+{% for row in disc_data %}
+    <article>
+        <h2>
+            <a href="{{ url_for('discovery_dataset_show', id=row.id) }}">
+                ✔  {{row.id}}  -  {{row.title|upper}}
+            </a>
+        </h2>
+        <p>{{row.content|truncate(15)}}</p>
+    </article>
+    <br>
+    
+    
+{% endfor %}
+
+{% endblock  %}

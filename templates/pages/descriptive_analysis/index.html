@@ -1,0 +1,38 @@
+{% extends 'layouts/default.html' %}
+
+
+{% block title %} 
+desc analysis
+{% endblock %}
+
+{% block body %}
+    <h1>Desciptive analysis</h1>
+
+        <h3>Dataset</h3>
+            <br>
+            {{ data | safe }}
+            <br>
+            <p>Data check ==> {{check}}</p>
+            <br>
+            <p>value_count ==> {{count}}</p>
+            <br>
+        <h3>Distribution of object variables</h3>
+            <br>
+            {% for on in object_name %}
+                <img src='static/images/{{on}}.png' alt="Chart" height="400" width="400">
+            {% endfor %}
+
+            <br>
+
+        <h3>Distribution of float variables</h3>
+            <br>
+            {% for fn in float_name %}
+                <img src='static/images/{{fn}}.png' alt="Chart" height="400" width="400">
+            {% endfor %}
+
+        <br>
+        <h3>Pearson correlation coeficient</h3>
+            <img src='static/images/heatmap.png' alt="Chart" height="400" width="400">
+
+
+{% endblock  %}
